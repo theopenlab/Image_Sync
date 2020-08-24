@@ -1,0 +1,20 @@
+name: Build Blog
+
+on: [pull_request]
+
+jobs:
+  image_sync:
+    name: Synce image from swr to dockerhub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch image
+        run: |
+          sudo docker login -u xxx -p xxx swr.ap-southeast-3.myhuaweicloud.com
+          sudo docker pull swr.ap-southeast-3.myhuaweicloud.com/openlab/k8scloudprovider/openstack-cloud-controller-manager:latest
+          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/k8scloudprovider/openstack-cloud-controller-manager:latest k8scloudprovider/openstack-cloud-controller-manager:latest
+          sudo docker logout swr.ap-southeast-3.myhuaweicloud.com
+      - name: Sync image
+        run: |
+          sudo docker login -u xxx -p xxx
+          sudo docker push k8scloudprovider/openstack-cloud-controller-manager:latest
+          sudo docker logout
