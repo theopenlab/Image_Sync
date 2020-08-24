@@ -1,6 +1,8 @@
-name: Build Blog
+name: Sync Image
 
-on: [pull_request]
+on:
+  schedule:
+    - cron: '0 17 * * *'
 
 jobs:
   image_sync:
