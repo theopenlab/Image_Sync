@@ -9,12 +9,12 @@ jobs:
     steps:
       - name: Fetch image
         run: |
-          sudo docker login -u xxx -p xxx swr.ap-southeast-3.myhuaweicloud.com
-          sudo docker pull swr.ap-southeast-3.myhuaweicloud.com/openlab/k8scloudprovider/openstack-cloud-controller-manager:latest
-          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/k8scloudprovider/openstack-cloud-controller-manager:latest k8scloudprovider/openstack-cloud-controller-manager:latest
+          sudo docker login -u ap-southeast-3@${{ secrets.SWR_AK }} -p ${{ secrets.SWR_SK }} swr.ap-southeast-3.myhuaweicloud.com
+          sudo docker pull swr.ap-southeast-3.myhuaweicloud.com/openlab/openstack-cloud-controller-manager:latest
+          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/openstack-cloud-controller-manager:latest openstack-cloud-controller-manager:latest
           sudo docker logout swr.ap-southeast-3.myhuaweicloud.com
       - name: Sync image
         run: |
-          sudo docker login -u xxx -p xxx
+          sudo docker login -u @${{ secrets.HUB_NAME }} -p @${{ secrets.HUB_PASSWORD }}
           sudo docker push k8scloudprovider/openstack-cloud-controller-manager:latest
           sudo docker logout
