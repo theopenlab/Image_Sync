@@ -4,7 +4,7 @@ on: [pull_request]
 
 jobs:
   image_sync:
-    name: Synce image from swr to dockerhub
+    name: Synce image from swr to dockerhub 123
     runs-on: ubuntu-latest
     steps:
       - name: Fetch image
