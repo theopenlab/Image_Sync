@@ -28,20 +28,20 @@ jobs:
           sudo docker pull swr.ap-southeast-3.myhuaweicloud.com/openlab/barbican-kms-plugin:latest
           sudo docker pull swr.ap-southeast-3.myhuaweicloud.com/openlab/magnum-auto-healer:latest
 
-          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/openstack-cloud-controller-manager-amd64:latest openstack-cloud-controller-manager-amd64:latest
-          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/cinder-csi-plugin-amd64:latest cinder-csi-plugin-amd64:latest
-          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/k8s-keystone-auth-amd64:latest k8s-keystone-auth-amd64:latest
-          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/octavia-ingress-controller-amd64:latest octavia-ingress-controller-amd64:latest
-          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/manila-csi-plugin-amd64:latest manila-csi-plugin-amd64:latest
-          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/barbican-kms-plugin-amd64:latest barbican-kms-plugin-amd64:latest
-          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/magnum-auto-healer-amd64:latest magnum-auto-healer-amd64:latest
-          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/openstack-cloud-controller-manager:latest openstack-cloud-controller-manager:latest
-          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/cinder-csi-plugin:latest cinder-csi-plugin:latest
-          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/k8s-keystone-auth:latest k8s-keystone-auth:latest
-          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/octavia-ingress-controller:latest octavia-ingress-controller:latest
-          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/manila-csi-plugin:latest manila-csi-plugin:latest
-          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/barbican-kms-plugin:latest barbican-kms-plugin:latest
-          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/magnum-auto-healer:latest magnum-auto-healer:latest
+          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/openstack-cloud-controller-manager-amd64:latest k8scloudprovider/openstack-cloud-controller-manager-amd64:latest
+          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/cinder-csi-plugin-amd64:latest k8scloudprovider/cinder-csi-plugin-amd64:latest
+          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/k8s-keystone-auth-amd64:latest k8scloudprovider/k8s-keystone-auth-amd64:latest
+          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/octavia-ingress-controller-amd64:latest k8scloudprovider/octavia-ingress-controller-amd64:latest
+          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/manila-csi-plugin-amd64:latest k8scloudprovider/manila-csi-plugin-amd64:latest
+          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/barbican-kms-plugin-amd64:latest k8scloudprovider/barbican-kms-plugin-amd64:latest
+          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/magnum-auto-healer-amd64:latest k8scloudprovider/magnum-auto-healer-amd64:latest
+          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/openstack-cloud-controller-manager:latest k8scloudprovider/openstack-cloud-controller-manager:latest
+          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/cinder-csi-plugin:latest k8scloudprovider/cinder-csi-plugin:latest
+          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/k8s-keystone-auth:latest k8scloudprovider/k8s-keystone-auth:latest
+          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/octavia-ingress-controller:latest k8scloudprovider/octavia-ingress-controller:latest
+          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/manila-csi-plugin:latest k8scloudprovider/manila-csi-plugin:latest
+          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/barbican-kms-plugin:latest k8scloudprovider/barbican-kms-plugin:latest
+          sudo docker tag swr.ap-southeast-3.myhuaweicloud.com/openlab/magnum-auto-healer:latest k8scloudprovider/magnum-auto-healer:latest
 
           sudo docker logout swr.ap-southeast-3.myhuaweicloud.com
       - name: Sync image
