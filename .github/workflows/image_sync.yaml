@@ -3,6 +3,8 @@ name: Sync Image
 on:
   schedule:
     - cron: '0 17 * * *'
+  issue_comment:
+    types: [created]
 
 jobs:
   image_sync:
